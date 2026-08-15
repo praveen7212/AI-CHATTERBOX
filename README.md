@@ -1,20 +1,22 @@
-AI Chatterbox
+# AI Chatterbox
 
-AI Chatterbox is a real-time chat application with AI chat functionality.
+AI Chatterbox is a real-time chat application with AI-powered chat functionality.
 
-Features
-User Signup & Login
-JWT Authentication
-Real-time Chat using Socket.IO
-One-to-One Messaging
-AI Chat
-MongoDB Database
-REST APIs
-Tech Stack
-Node.js
-Express.js
-MongoDB
-Socket.IO
-JWT
-OpenAI API
-HTML, CSS, JavaScript# AI-CHATTERBOX
+## Features
+
+- User Signup & Login
+- JWT Authentication
+- Real-time Messaging
+- AI Chat
+- MongoDB Database
+- REST APIs
+- Socket.IO
+
+## Tech Stack
+
+Node.js, Express.js, MongoDB, Socket.IO, JWT, OpenAI API, HTML, CSS, JavaScript
+
+## Installation
+
+```bash
+npm install
