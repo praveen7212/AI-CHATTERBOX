@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Chatterbox</title>
+
+    <link
+        rel="stylesheet"
+        href="css/chat.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+
+            <div
+                class="avatar"
+                id="myAvatar"
+            >
+                U
+            </div>
+
+            <div class="profile-details">
+
+                <h3 id="myName">
+                    User
+                </h3>
+
+                <span class="online-text">
+                    ● Online
+                </span>
+
+            </div>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search chats..."
+            >
+
+        </div>
+
+
+        <div
+            id="chatList"
+            class="chat-list"
+        >
+
+            <!-- AI Assistant -->
+
+            <div
+                class="chat-item ai-item"
+                id="aiAssistant"
+            >
+
+                <div class="avatar ai-avatar">
+                    AI
+                </div>
+
+                <div class="chat-info">
+
+                    <h4>AI Assistant</h4>
+
+                    <p>
+                        Ask anything
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Backend users/chats inserted here -->
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         CHAT AREA
+    ========================== -->
+
+    <main class="chat-area">
+
+        <!-- Empty screen -->
+
+        <section
+            id="emptyChat"
+            class="empty-chat"
+        >
+
+            <div class="empty-icon">
+                💬
+            </div>
+
+            <h2>
+                Welcome to AI Chatterbox
+            </h2>
+
+            <p>
+                Select a conversation to start chatting
+            </p>
+
+        </section>
+
+
+        <!-- Active chat -->
+
+        <section
+            id="activeChat"
+            class="active-chat"
+        >
+
+            <!-- HEADER -->
+
+            <header class="chat-header">
+
+                <div class="chat-user">
+
+                    <div
+                        class="avatar"
+                        id="chatAvatar"
+                    >
+                        U
+                    </div>
+
+                    <div>
+
+                        <h3 id="chatName">
+                            User
+                        </h3>
+
+                        <span
+                            id="chatStatus"
+                            class="chat-status"
+                        >
+                            Offline
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- MESSAGES -->
+
+            <div
+                id="messages"
+                class="messages"
+            >
+            </div>
+
+
+            <!-- TYPING -->
+
+            <div
+                id="typingIndicator"
+                class="typing-indicator"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <span class="typing-text">
+                    typing...
+                </span>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <footer class="message-area">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Type a message..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="sendBtn"
+                >
+                    Send
+                </button>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Socket.IO -->
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="js/socket.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
+
+</html>
